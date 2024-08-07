@@ -1,6 +1,6 @@
 <h3 align="center">A TikTakToe game in Godot</h3>
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">This is my first ever Godot project</h3>
 <p align="left">
 </p>
 
