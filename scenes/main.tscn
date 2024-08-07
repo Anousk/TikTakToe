@@ -1,0 +1,166 @@
+[gd_scene load_steps=13 format=3 uid="uid://davvgspba0yfb"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_hs10d"]
+[ext_resource type="Texture2D" uid="uid://cnthu2ahvcftx" path="res://assets/Panel.png" id="1_xv5me"]
+[ext_resource type="Script" path="res://scripts/3_3.gd" id="2_f3afx"]
+[ext_resource type="Script" path="res://scripts/3_2.gd" id="4_5v3pw"]
+[ext_resource type="Script" path="res://scripts/3_1.gd" id="5_m6hqx"]
+[ext_resource type="Script" path="res://scripts/2_3.gd" id="6_kxfoq"]
+[ext_resource type="Script" path="res://scripts/2_2.gd" id="7_4eufk"]
+[ext_resource type="Script" path="res://scripts/2_1.gd" id="8_rcrt2"]
+[ext_resource type="Script" path="res://scripts/1_3.gd" id="9_2oh18"]
+[ext_resource type="Script" path="res://scripts/1_2.gd" id="10_ujkwk"]
+[ext_resource type="Script" path="res://scripts/1_1.gd" id="11_51lj2"]
+[ext_resource type="Texture2D" uid="uid://bntw4bqsxp12y" path="res://assets/BgGameOver.png" id="12_f0gpe"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_hs10d")
+
+[node name="Panel" type="Sprite2D" parent="."]
+position = Vector2(559, 334)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_xv5me")
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="3_3" type="Button" parent="Moves"]
+offset_left = 640.0
+offset_top = 436.0
+offset_right = 783.0
+offset_bottom = 577.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("2_f3afx")
+
+[node name="3_2" type="Button" parent="Moves"]
+offset_left = 488.0
+offset_top = 436.0
+offset_right = 631.0
+offset_bottom = 577.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("4_5v3pw")
+
+[node name="3_1" type="Button" parent="Moves"]
+offset_left = 336.0
+offset_top = 436.0
+offset_right = 479.0
+offset_bottom = 577.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("5_m6hqx")
+
+[node name="2_3" type="Button" parent="Moves"]
+offset_left = 640.0
+offset_top = 286.0
+offset_right = 783.0
+offset_bottom = 427.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("6_kxfoq")
+
+[node name="2_2" type="Button" parent="Moves"]
+offset_left = 488.0
+offset_top = 286.0
+offset_right = 631.0
+offset_bottom = 427.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("7_4eufk")
+
+[node name="2_1" type="Button" parent="Moves"]
+offset_left = 336.0
+offset_top = 286.0
+offset_right = 479.0
+offset_bottom = 427.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("8_rcrt2")
+
+[node name="1_3" type="Button" parent="Moves"]
+offset_left = 640.0
+offset_top = 136.0
+offset_right = 783.0
+offset_bottom = 277.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("9_2oh18")
+
+[node name="1_2" type="Button" parent="Moves"]
+offset_left = 488.0
+offset_top = 136.0
+offset_right = 631.0
+offset_bottom = 277.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("10_ujkwk")
+
+[node name="1_1" type="Button" parent="Moves"]
+offset_left = 336.0
+offset_top = 136.0
+offset_right = 479.0
+offset_bottom = 277.0
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+toggle_mode = true
+keep_pressed_outside = true
+expand_icon = true
+script = ExtResource("11_51lj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(563, 330)
+scale = Vector2(12.3962, 32)
+texture = ExtResource("12_f0gpe")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 397.0
+offset_top = 280.0
+offset_right = 627.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 75
+text = "? Wins"
+
+[connection signal="changed_player" from="." to="Moves/3_3" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/3_2" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/3_1" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/2_3" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/2_2" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/2_1" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/1_3" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/1_2" method="_on_main_changed_player"]
+[connection signal="changed_player" from="." to="Moves/1_1" method="_on_main_changed_player"]
+[connection signal="changing_player_3_3" from="Moves/3_3" to="." method="_on__3_changing_player_3_3"]
+[connection signal="toggled" from="Moves/3_3" to="Moves/3_3" method="_on_toggled"]
+[connection signal="changing_player_3_2" from="Moves/3_2" to="." method="_on__2_changing_player_3_2"]
+[connection signal="toggled" from="Moves/3_2" to="Moves/3_2" method="_on_toggled"]
+[connection signal="changing_player_3_1" from="Moves/3_1" to="." method="_on__1_changing_player_3_1"]
+[connection signal="toggled" from="Moves/3_1" to="Moves/3_1" method="_on_toggled"]
+[connection signal="changing_player_2_3" from="Moves/2_3" to="." method="_on__3_changing_player_2_3"]
+[connection signal="toggled" from="Moves/2_3" to="Moves/2_3" method="_on_toggled"]
+[connection signal="changing_player_2_2" from="Moves/2_2" to="." method="_on__2_changing_player_2_2"]
+[connection signal="toggled" from="Moves/2_2" to="Moves/2_2" method="_on_toggled"]
+[connection signal="changing_player_2_1" from="Moves/2_1" to="." method="_on__1_changing_player_2_1"]
+[connection signal="toggled" from="Moves/2_1" to="Moves/2_1" method="_on_toggled"]
+[connection signal="changing_player_1_3" from="Moves/1_3" to="." method="_on__3_changing_player_1_3"]
+[connection signal="toggled" from="Moves/1_3" to="Moves/1_3" method="_on_toggled"]
+[connection signal="changing_player_1_2" from="Moves/1_2" to="." method="_on__2_changing_player_1_2"]
+[connection signal="toggled" from="Moves/1_2" to="Moves/1_2" method="_on_toggled"]
+[connection signal="changing_player_1_1" from="Moves/1_1" to="." method="_on__1_changing_player_1_1"]
+[connection signal="toggled" from="Moves/1_1" to="Moves/1_1" method="_on_toggled"]
